@@ -1,0 +1,265 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.4em;
+    font-weight: normal;
+
+}
+
+.conteiner {
+    /* максимальная ширина экрана для просматривания */
+    max-width: 750px;
+    /* авто - контент на сайте будет по центру */
+    margin: auto;
+    padding-top: 30px;
+}
+
+.avatar {
+    width: 250px;
+    margin-bottom: 10px;
+    /* Данный тег позволяет сделать тень для фотографии и если мы откроем код в браузере, то увидим в какую сторону смешенна тень и 14px это блюр */
+    box-shadow: 4px 4px 14px rgba(0,0,0, .25)
+    
+}
+
+.info {
+    /* Отступ после виш ми лак */
+    margin-bottom: 10px; 
+    display: flex;
+}
+
+/* Обязательно прописывать p чтоб было понимание что марджин относится к параграфам (прописываем тот элемент который надо изменить внутри класса)*/
+
+.info-text {
+  margin-left: 40px;
+}
+
+.info-text p {
+    font-style: normal;
+    margin: 0;
+
+}
+
+/* Когда размер браузера становится меньше 650px происходит адаптив */
+@media (max-width: 650px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+} 
+
+/* Если мы имеем одно одинаковое слово в названии класса, то свойства к этому названию у всех жлементов будет одинаковое */
+.card {
+
+    border-radius: 20px;
+    /* 10 сверху-снизу, 20 слева-справа */
+    padding: 10px 20px;
+    
+    /* всегда добавляем в блоках нижний отступ, если удалится какой-то блок, чтоб структура сайта не нарушилась. margin-top в случае если мы удалим верхний элемент структура сайта будет выглядить некрасиво*/
+    margin-bottom: 20px;
+    border: 30px;
+}
+
+.card h3 {
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    margin: 0;
+}
+
+.card h5 {
+    margin: 0;
+}
+
+.card p {
+    margin: 5px;
+}
+/* Добавляем в каждый класс уникальное название чтоб стилизовать его по отдельности */
+.bg-yellow {
+    background: #ffd572;
+    
+    
+}
+
+.bg-green {
+    background: rgb(179, 255, 128);
+
+}
+
+.bg-purpure {
+    background: #ff89ff;
+   
+
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a.hover {
+    text-decoration: underline;
+}
+
+a.active {
+    color: #ffd572;
+}
+
+a:visited {
+    color: rgb(107, 23, 122);
+}
+
+.message {
+    padding: 20px 5px;
+}
+
+
+.message h2 {
+    text-align: center;
+
+}
+
+
+.btn {
+    background: rgb(0, 0, 0);
+    padding: 20px 40px;
+
+    color: beige;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+    /* Для того чтоб кнопка была по середине */
+    margin: 0 auto;
+    display: block;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.list {
+    padding: 0 20px;
+}
+
+.list li {
+    color: #3b3b3b;
+    margin-bottom: 2px;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin-bottom: 2px;
+}
+
+.links p {
+    margin: 0px;
+    padding-top: 5px;
+}
+
+.links {
+    margin: 20px 0;
+}
+
+/* Стилистика для формы */
+
+.form h3 {
+    margin-top: 0;
+   text-align: center;
+    
+}
+
+
+.form-group label {
+    /* Меняем лабель потому что по умолчанию он линейный объект */
+    display: block;
+    font-size: 14px;
+    color: #3b3b3b;;
+}
+
+.form-row {
+    margin-bottom: 10px;
+
+    /* Если хотим сделать в строку элементы */
+    display: flex;
+}
+
+.form-row .form-group {
+    margin-right: 30px;
+
+    /* Проставляем это когда надо сделать элементы в строку */
+    width: 50%;
+   
+}
+
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 650px) {
+    .form-row {
+        margin-bottom: 10px;
+
+        /* Если хотим сделать в строку элементы */
+        display: block;
+    
+    }
+
+    .form-row, .form-group {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .info-text {
+        margin-left: 0;
+    }
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    /* По ширине бокса  */
+    box-sizing: border-box;
+
+    /* удаление границы блока */
+    border: none;
+
+    /* Прозрачный беграунд */
+    background: transparent;
+
+    /* Линия внизу */
+    border-bottom: 1px solid #fb51b2;
+
+    /* цвет внутри блока для ввода */
+    color: black;
+    padding: 15px 0 10px;
+
+    /*  при нажатии была синяя линия, мы ее удаляем */
+    outline: none;
+
+    /* Для того чтоб форматирование было как по всему сайту */
+    font-family: inherit;
+
+
+}
+
+::placeholder {
+    color: #fb51b2;
+}
+
+
+/* Для того чтоб при автозаполнении цвет был как у формы */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+     box-shadow: 0 0 0 30px rgb(255, 137, 255) inset !important;
+}
+
+
